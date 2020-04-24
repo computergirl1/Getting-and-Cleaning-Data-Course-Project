@@ -53,4 +53,4 @@ meltedData <- melt(combined_data_set,id=c("subject","activity"))
 tidy_data <- dcast(meltedData,subject+activity~variable,mean)
 
 #write the tidy data set of averaged mean and std deviation values to a file
-write.table(tidy_data,"./tidy_data_set.txt")
+write.table(tidy_data,"./tidy_data_set.txt",row.name=FALSE)
